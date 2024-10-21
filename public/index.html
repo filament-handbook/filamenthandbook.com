@@ -1,14 +1,236 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boilerplate for static pages using TailwindCSS and AlpineJS</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/scripts.min.js"></script>
-    <script type="module" src="./js/alpine.min.js"></script>
-</head>
-<body x-data>
-    <!-- Add your awesome content here -->
-</body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="en" class="h-full antialiased light" style="color-scheme: light;">
+    <head>
+        <title>Filament Handbook</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="author" content="Andréia Bohner">
+        <meta name="keywords" content="Filament, Handbook, Book, Forms, PHP">
+        <meta name="description" content="Filament Handbook - Form Builder">
+
+        <meta property="og:title" content="Filament Handbook">
+        <meta property="og:url" content="https://filamenthandbook.com">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Filament PHP Handbook">
+        <meta property="og:image" content="./images/filament-handbook-lights-og.png">
+        <meta property="og:image:secure_url" content="./images/filament-handbook-lights-og.jpg">
+        <meta property="og:image:width" content="1999">
+        <meta property="og:image:height" content="1999">
+        <meta property="og:image:type" content="image/jpg">
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Filament Handbook" />
+        <meta name="twitter:creator" content="@andreiabohner">
+        <meta name="twitter:description" content="Filament PHP Handbook"/>
+        <meta name="twitter:image" content="./images/filament-handbook-lights-x.png" />
+        <meta name="twitter:domain" content="https://filamenthandbook.com">
+
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="./js/scripts.min.js"></script>
+        <script type="module" src="./js/alpine.min.js"></script>
+     </head>
+
+    <body class="flex h-full bg-white dark:bg-black" x-data>
+
+    <div class="fixed inset-0 flex justify-center sm:px-8">
+            <div class="flex w-full max-w-7xl lg:px-8">
+                <div class="w-full bg-white ring-1 ring-stone-100 dark:bg-stone-900 dark:ring-stone-300/20">
+                </div>
+            </div>
+        </div>
+
+        <div class="relative flex w-full flex-col">
+            <main class="flex-auto">
+                <div class="sm:px-8 mt-10 sm:mt-16">
+                    <div class="mx-auto w-full max-w-7xl lg:px-8">
+                        <div class="relative px-4 sm:px-8 lg:px-12">
+                            <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                <div class="grid grid-cols-1 gap-y-6 md:gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
+                                    <div class="lg:pl-20">
+                                        <div class="md:max-w-xs lg:max-w-none">
+                                            <h1 class="text-4xl text-center md:text-left font-bold tracking-tight text-stone-800 sm:text-5xl dark:text-stone-100" x-intersect="$el.classList.add('fade-enter')">Filament Form Builder Handbook</h1>
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:order-first lg:row-span-2 md:h-screen md:sticky top-0">
+                                        <div class="mx-auto flex w-64 rounded-xl bg-slate-600 shadow-xl md:w-80 lg:w-auto">
+                                            <img alt="Filament Handbook Cover" fetchpriority="high" loading="lazy"  decoding="async" data-nimg="1" class="w-full" style="color:transparent" srcset="./images/cover.jpg 2480w,
+                                                ./images/cover_680w.jpg 680w"
+                                            src="./images/cover.jpg">
+                                        </div>
+                                    </div>
+
+                                    <div class="lg:pl-20">
+
+                                        <div class="mt-4 space-y-7 text-base text-stone-600 dark:text-stone-400">
+                                            <p x-intersect="$el.classList.add('fade-enter')">
+                                            Introducing the Filament Handbook eBook series, your go-to quick reference for the awesome <a href="https://filamentphp.com/" class="underline text-[#F59410] hover:text-black visited:text-purple-600">Filament PHP components</a>.
+                                            </p>
+
+                                            <p x-intersect="$el.classList.add('fade-enter')">Dive now into the first eBook, dedicated to the Form Builder component, available for only $10 and supercharge your development!</p>
+                                        </div>
+
+                                        <div class="text-center pt-16">
+                                            <a href="https://filamenthandbook.gumroad.com/l/fiwpt" class="rounded-xl p-4 mt-6 space-y-7 text-base text-white bg-[#F59410] hover:bg-fuchsia-800 shadow-lg dark:text-stone-100">Get the Form Builer eBook for just $10.00</a>
+                                        </div>
+
+                                        <h2 class="text-3xl text-center font-bold pt-14 pb-8 dark:text-stone-100">
+                                            Book preview
+                                        </h2>
+
+                                        <div class="text-center">
+                                            <div x-data="{modalIsOpen: false}">
+                                                <a href="#" @click="modalIsOpen = true" class="cursor-pointer hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:opacity-100">
+                                                    <img src="./images/page_preview.jpg" width="150" class="border m-auto">
+                                                </a>
+
+                                                <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen" @keydown.esc.window="modalIsOpen = false" @click.self="modalIsOpen = false" class="fixed inset-0 z-30 flex items-end justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8" role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
+                                                    <!-- Modal Dialog -->
+                                                    <div x-show="modalIsOpen" x-transition:enter="transition ease-out duration-200 delay-100 motion-reduce:transition-opacity" x-transition:enter-start="opacity-0 scale-y-0" x-transition:enter-end="opacity-100 scale-y-100" class="flex max-w-lg flex-col gap-4 overflow-hidden rounded-md border border-neutral-300 bg-white text-neutral-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+                                                        <!-- Dialog Header -->
+                                                        <div class="flex items-center justify-between border-b border-neutral-300 bg-neutral-50/60 p-4 dark:border-neutral-700 dark:bg-neutral-950/20">
+                                                            <h3 id="defaultModalTitle" class="font-semibold tracking-wide text-neutral-900 dark:text-white">Book Preview</h3>
+                                                            <button @click="modalIsOpen = false" aria-label="close modal">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="1.4" class="w-5 h-5">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <!-- Dialog Body -->
+                                                        <div class="px-4 py-8 h-4/5 w-fit"> 
+                                                         <object data="book_preview.pdf#view=FitV" type="application/pdf" width="500px" height="500px">
+                                                            <p>
+                                                                It appears your Web browser is not configured to display PDF files. No worries, just <a href="./book_preview.pdf">click here to download the PDF file.</a>
+                                                            </p>
+                                                        </object>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                        <h2 class="text-3xl text-center font-bold pt-14 pb-6 dark:text-stone-100">
+                                            Chapters
+                                        </h2>
+
+                                        <div class="grid grid-cols-1 gap-y-3">
+                                            <div class="text-lg bg-neutral-100 rounded-lg p-2 pl-4 flex dark:bg-stone-700">
+                                                <div>
+                                                    <p class="text-4xl text-[#F8C301]">1. </p>
+                                                </div>
+                                                <div class="grow pl-6">
+                                                    <p class="text-lg dark:text-stone-100">Overview</p>
+                                                    <p class="text-sm text-stone-500 dark:text-stone-200">Installation, Livewire component for create/edit forms, form components, form skeleton, CLI, global settings.</p>
+                                                </div>
+                                              </div>
+                                              <div class="text-lg bg-stone-100 rounded-lg p-2 pl-4 flex  dark:bg-stone-700">
+                                                <div>
+                                                    <p class="text-4xl text-[#F8C301]">2. </p>
+                                                </div>
+                                                <div class="grow pl-6">
+                                                    <p class="text-lg dark:text-stone-100">Fields</p>
+                                                    <p class="text-sm text-stone-500 dark:text-stone-200">Available fields, configuration methods, dynamic fields, eloquent integration, colors, aligments, enums.</p>
+                                                </div>
+                                              </div>
+                                              <div class="text-lg bg-stone-100 rounded-lg p-2 pl-4 flex dark:bg-stone-700">
+                                                <div>
+                                                    <p class="text-4xl text-[#F8C301]">3. </p>
+                                                </div>
+                                                <div class="grow pl-6">
+                                                    <p class="text-lg dark:text-stone-100">Layout</p>
+                                                    <p class="text-sm text-stone-500 dark:text-stone-200">Available layouts, configuration methods.</p>
+                                                </div>
+                                              </div>
+                                              <div class="text-lg bg-stone-100 rounded-lg p-2 pl-4 flex dark:bg-stone-700">
+                                                <div>
+                                                    <p class="text-4xl text-[#F8C301]">4. </p>
+                                                </div>
+                                                <div class="grow pl-6">
+                                                    <p class="text-lg dark:text-stone-100">Validation</p>
+                                                    <p class="text-sm text-stone-500 dark:text-stone-200">Rules, custom validation, validation notifications.</p>
+                                                </div>
+                                              </div>
+                                              <div class="text-lg bg-stone-100 rounded-lg p-2 pl-4 flex dark:bg-stone-700">
+                                                <div>
+                                                    <p class="text-4xl text-[#F8C301]">5. </p>
+                                                </div>
+                                                <div class="grow pl-6">
+                                                    <p class="text-lg dark:text-stone-100">Form Actions</p>
+                                                    <p class="text-sm text-stone-500 dark:text-stone-200">Affix actions, hint actions, actions in custom form components, actions in the form schema.</p>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+
+                                        <ul role="list" class="pt-14">
+                                            <li class="flex">
+                                                <a class="group flex text-sm font-medium text-stone-800 transition hover:text-[#F59410] dark:text-stone-200" href="https://x.com/andreiabohner">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none fill-stone-500 transition group-hover:fill-[#F59410]"><path d="M13.3174 10.7749L19.1457 4H17.7646L12.7039 9.88256L8.66193 4H4L10.1122 12.8955L4 20H5.38119L10.7254 13.7878L14.994 20H19.656L13.3171 10.7749H13.3174ZM11.4257 12.9738L10.8064 12.0881L5.87886 5.03974H8.00029L11.9769 10.728L12.5962 11.6137L17.7652 19.0075H15.6438L11.4257 12.9742V12.9738Z"></path></svg>
+                                                <span class="ml-4">Follow on X</span>
+                                                </a>
+                                            </li>
+
+                                            <li class="mt-4 flex">
+                                                <a class="group flex text-sm font-medium text-stone-800 transition hover:text-[#F59410] dark:text-stone-200" href="https://github.com/filament-handbook">
+                                                <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none fill-stone-500 transition group-hover:fill-[#F59410]"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path></svg>
+                                                <span class="ml-4">Follow on GitHub</span>
+                                                </a>
+                                            </li>
+                                            
+                                            <li class="mt-8 border-t border-stone-100 pt-8 dark:border-stone-700/40 flex">
+                                                <a class="group flex text-sm font-medium text-stone-800 transition hover:text-[#F2911B] dark:text-stone-200 dark:hover:text-[#F2911B]" href="mailto:andreiabohner@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none fill-stone-500 transition group-hover:fill-[#F2911B]"><path fill-rule="evenodd" d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"></path></svg><span class="ml-4">Get in touch</span>
+                                                </a>
+                                           </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <footer class="mt-32 flex-none">
+                <div class="sm:px-8">
+                    <div class="mx-auto w-full max-w-7xl lg:px-8">
+                        <div class="border-t border-stone-100 pb-16 pt-10 dark:border-stone-700/40">
+                            <div class="relative px-4 sm:px-8 lg:px-12">
+                                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                    <div class="flex flex-col items-center justify-center md:justify-end gap-6 sm:flex-row">
+                                        <p class="text-sm text-stone-400 dark:text-stone-500"  x-data="{ year: new Date().getFullYear() }">© <span x-text="year"></span> Andréia Bohner. All rights reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    </body>
 </html>

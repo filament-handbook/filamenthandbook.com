@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+@layer utilities {
+    @keyframes fade-enter {
+        0% {
+            opacity: 0;
+            transform: translateY(50%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .fade-enter {
+        animation: fade-enter 1s;
+    }
+
+    @keyframes scale {
+        0% {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    .scale {
+        animation: scale 1s;
+    }
+
+    @media (prefers-reduced-motion) {
+        .fade-enter,
+        .scale {
+            animation: none;
+        }
+    }
+}

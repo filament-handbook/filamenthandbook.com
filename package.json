@@ -2,15 +2,17 @@
   "name": "boilerplate-tailwindcss-alpinejs",
   "version": "1.0.0",
   "scripts": {
-    "uglify:copy-alpine": "uglifyjs ./node_modules/alpinejs/dist/module.esm.js -c -m -o ./public/js/module.esm.js",
+    "uglify:copy-alpine": "uglifyjs ./node_modules/alpinejs/dist/module.esm.min.js -c -m -o ./public/js/module.esm.js",
     "build:scripts": "uglifyjs ./src/scripts/scripts.js -c -m -o ./public/js/scripts.min.js",
     "build:alpine": "uglifyjs ./src/scripts/alpine.js -c -m -o ./public/js/alpine.min.js",
+    "uglify:copy-alpine-intersect": "uglifyjs ./node_modules/@alpinejs/intersect/dist/module.esm.min.js -c -m -o ./public/js/intersect.esm.js",
+    "uglify:copy-alpine-focus": "uglifyjs ./node_modules/@alpinejs/focus/dist/module.esm.min.js -c -m -o ./public/js/focus.esm.js",
     "dev:scripts": "uglifyjs ./src/scripts/scripts.js -b -o ./public/js/scripts.min.js",
     "dev:alpine": "uglifyjs ./src/scripts/alpine.js -b -o ./public/js/alpine.min.js",
     "build:css": "postcss ./src/styles.css -o ./public/css/styles.css",
     "watch": "onchange 'tailwind.config.js' './public/**/*.html' './src/**/*.css' -- npm run build:css",
-    "dev": "npm run build:css && npm run dev:scripts && npm run uglify:copy-alpine && npm run dev:alpine",
-    "build": "NODE_ENV=production postcss ./src/styles.css -o ./public/css/styles.css && npm run build:scripts && npm run uglify:copy-alpine && npm run build:alpine",
+    "dev": "npm run build:css && npm run dev:scripts && npm run uglify:copy-alpine && npm run uglify:copy-alpine-intersect && npm run uglify:copy-alpine-focus && npm run dev:alpine",
+    "build": "NODE_ENV=production postcss ./src/styles.css -o ./public/css/styles.css && npm run build:scripts && npm run uglify:copy-alpine && npm run uglify:copy-alpine-intersect && npm run uglify:copy-alpine-focus && npm run build:alpine",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -35,6 +37,8 @@
     "uglify-js": "^3.19.3"
   },
   "dependencies": {
+    "@alpinejs/focus": "^3.14.3",
+    "@alpinejs/intersect": "^3.14.3",
     "alpinejs": "^3.14.1",
     "onchange": "^7.1.0"
   }
